@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabula &mdash; a tablet for Latin &amp; Greek</title>
+  <meta name="description" content="Drill vocabulary, fill paradigm tables, parse sentences, and read glossed passages in Latin and Greek.">
+  
+  <!-- Canonical URL -->
+  <!-- Note: Replace 'https://yourdomain.com' with your actual production domain URL -->
+  <link rel="canonical" href="https://yourdomain.com/">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="assets/favicon.ico" sizes="any">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  
+  <meta property="og:title" content="Tabula &mdash; a tablet for Latin &amp; Greek">
+  <meta property="og:description" content="Drill vocabulary, fill paradigm tables, parse sentences, and read glossed passages in Latin and Greek.">
+  <meta property="og:image" content="https://yourdomain.com/assets/og-image.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/landing.css" />
+
+  <style>
+    /* Prevent default focus ring on non-interactive heading when focused via JS */
+    #modes-heading[tabindex="-1"]:focus {
+      outline: none;
+    }
+  </style>
+
+  <!-- Early execution script to resolve state & anchors BEFORE initial render -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      try {
+        var raw = localStorage.getItem('tabula-progress-v1');
+        if (!raw) return;
+        var saved = JSON.parse(raw);
+
+        var validModes = ['vocab', 'paradigm', 'parsing', 'accent', 'progress'];
+        var lastLang = (saved.lastLang === 'latin' || saved.lastLang === 'greek') ? saved.lastLang : null;
+        var lastMode = validModes.indexOf(saved.lastMode) !== -1 ? saved.lastMode : null;
+        if (!lastLang && !lastMode) return;
+
+        var preferredLang = lastLang || 'latin';
+        var preferredMode = lastMode || 'vocab';
+
+        var hint = document.querySelector('.hero-scroll-hint');
+        if (hint) hint.textContent = 'Pick up where you left off, or choose a different mode below.';
+
+        var targetCard = null;
+
+        document.querySelectorAll('.mode-card[href^="practice.html"]').forEach(function (a) {
+          try {
+            var url = new URL(a.href);
+            url.searchParams.set('lang', preferredLang);
+            a.href = url.href;
+
+            if (url.searchParams.get('mode') === preferredMode) {
+              targetCard = a;
+            }
+          } catch (e) {
+            var href = a.getAttribute('href');
+            if (href.indexOf('lang=') === -1) a.setAttribute('href', href + '&lang=' + preferredLang);
+            if (href.indexOf('mode=' + preferredMode) !== -1) targetCard = a;
+          }
+        });
+
+        var defaultCard = document.querySelector('.mode-card-default');
+        if (defaultCard) {
+          defaultCard.classList.remove('mode-card-default');
+          defaultCard.removeAttribute('id');
+          var oldBadge = defaultCard.querySelector('.mode-card-start');
+          if (oldBadge) oldBadge.remove();
+        }
+        
+        if (targetCard) {
+          targetCard.classList.add('mode-card-default');
+          targetCard.id = 'first-mode';
+          var h3 = targetCard.querySelector('h3');
+          if (h3 && !h3.querySelector('.mode-card-start')) {
+            var span = document.createElement('span');
+            span.className = 'mode-card-start';
+            span.textContent = 'continue here';
+            h3.appendChild(span);
+          }
+        }
+      } catch (err) {
+        console.warn('Tabula: could not read saved progress for landing personalization.', err);
+      }
+    });
+  </script>
+</head>
+<body class="landing-body">
+
+  <a class="skip-link" href="#first-mode">Skip to entrance</a>
+
+  <main class="landing">
+
+    <section class="hero">
+      <div class="hero-tablet">
+        <p class="hero-eyebrow">a wax tablet, kept open on the desk</p>
+        <h1 class="hero-title incised">
+          <span class="hero-title-la" lang="la">TABVLA</span>
+          <span class="hero-title-flourish">&middot;</span>
+          <span class="hero-title-gr" lang="el">Π&Iacute;ΝΑΞ</span>
+        </h1>
+        <p class="hero-scope">hundreds of words, paradigms, and practice sentences across both</p>
+        <p class="hero-lede">
+          Tabula holds Latin and Greek side by side &mdash; flashcards,
+          paradigm tables, sentence parsing, and accent drills, all in
+          one place.
+        </p>
+        <p class="hero-lede">
+          Everything you get right or wrong is remembered in this
+          browser, so you can close the tablet and pick the stylus back
+          up later.
+        </p>
+        <a class="hero-scroll-hint" href="#modes-heading">Scroll down and choose a mode to start learning.</a>
+      </div>
+      <div class="hero-seam" aria-hidden="true"></div>
+    </section>
+
+    <section class="modes" aria-labelledby="modes-heading">
+      <h2 id="modes-heading" class="modes-heading" tabindex="-1">Choose where to start</h2>
+      <ul class="mode-grid">
+        <li>
+          <a class="mode-card mode-card-default" href="practice.html?mode=vocab" id="first-mode">
+            <span class="mode-card-label">vocab &middot; <span lang="el">λέξεις</span></span>
+            <h3>Vocab <span class="mode-card-start">start here</span></h3>
+            <p>Flip through flashcards that push what you know further out and pull what you don't back to the front.</p>
+          </a>
+        </li>
+        <li>
+          <a class="mode-card" href="practice.html?mode=paradigm">
+            <span class="mode-card-label">paradigms &middot; <span lang="el">τύποι</span></span>
+            <h3>Paradigms</h3>
+            <p>Type a full declension or conjugation into the table by hand, checked cell by cell as you go &mdash; or reveal it.</p>
+          </a>
+        </li>
+        <li>
+          <a class="mode-card" href="practice.html?mode=parsing">
+            <span class="mode-card-label">parsing &middot; <span lang="el">ἀνάλυσις</span></span>
+            <h3>Parsing</h3>
+            <p>Click any word in a practice sentence and name its case, mood, or voice. Your answers stay marked when you return. Sample sentences only &mdash; not quotations from ancient authors.</p>
+          </a>
+        </li>
+        <li>
+          <a class="mode-card" href="practice.html?mode=accent">
+            <span class="mode-card-label">accent &middot; <span lang="el">τόνοι</span></span>
+            <h3>Accent</h3>
+            <p>Spot which syllable is accented and what kind of mark it carries in Greek, or whether a marked vowel is long or short in Latin.</p>
+          </a>
+        </li>
+        <li class="mode-card-wide">
+          <a class="mode-card" href="practice.html?mode=progress">
+            <span class="mode-card-label">progress &middot; <span lang="el">πρόοδος</span></span>
+            <h3>Progress</h3>
+            <p>See at a glance how many words, forms, and sentences you've got down &mdash; and what still needs work.</p>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="credit landing-footer">
+    <nav class="footer-resources" aria-labelledby="footer-resources-heading">
+      <h2 id="footer-resources-heading" class="footer-resources-heading">Resources</h2>
+      <ul class="footer-resources-list">
+        <li><a href="https://logeion.uchicago.edu/" target="_blank" rel="noopener noreferrer">Logeion</a> &mdash; Latin &amp; Greek dictionary</li>
+        <li><a href="https://www.perseus.tufts.edu/hopper/" target="_blank" rel="noopener noreferrer">Perseus Digital Library</a> &mdash; texts &amp; word study</li>
+        <li><a href="https://dcc.dickinson.edu/home-page-ref-works" target="_blank" rel="noopener noreferrer">Dickinson College Commentaries: Reference Works</a> &mdash; grammars, paradigms &amp; vocabularies</li>
+      </ul>
+    </nav>
+    <nav class="footer-resources footer-contact" aria-labelledby="footer-contact-heading">
+      <h2 id="footer-contact-heading" class="footer-resources-heading">Contact</h2>
+      <ul class="footer-resources-list">
+        <li><a href="https://github.com/nocteix" target="_blank" rel="noopener noreferrer">github.com/nocteix</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <!-- Asynchronous dynamic counts fetch -->
+  <script>
+    (function () {
+      fetch('assets/js/counts.json')
+        .then(function (res) {
+          if (!res.ok) throw new Error('counts.json not found (' + res.status + ')');
+          return res.json();
+        })
+        .then(function (counts) {
+          var totalWords = (counts.words && ((counts.words.latin || 0) + (counts.words.greek || 0))) || 0;
+          var totalSentences = (counts.sentences && ((counts.sentences.latin || 0) + (counts.sentences.greek || 0))) || 0;
+          var total = totalWords + totalSentences;
+          if (total <= 0) return;
+          var rounded = Math.max(25, Math.floor(total / 25) * 25);
+          var scope = document.querySelector('.hero-scope');
+          if (scope) scope.textContent = rounded + '+ words, paradigms, and practice sentences across both';
+        })
+        .catch(function (err) {
+          console.warn('Tabula: could not load counts.json, leaving placeholder scope line.', err);
+        });
+    })();
+  </script>
+
+  <!-- Accessibility-aware smooth scroll handler -->
+  <script>
+    (function () {
+      var scrollHint = document.querySelector('.hero-scroll-hint');
+      var target = document.getElementById('modes-heading');
+      if (!scrollHint || !target) return;
+
+      scrollHint.addEventListener('click', function (e) {
+        e.preventDefault();
+        var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        target.scrollIntoView({ 
+          behavior: prefersReducedMotion ? 'auto' : 'smooth', 
+          block: 'start' 
+        });
+        target.focus({ preventScroll: true });
+      });
+    })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,189 @@
+id,headword,pos,meaning,gender,declension,genitive,conjugation,principal_parts,forms
+chora,χώρα,noun,land/country,f,1,χώρας,,,
+logos,λόγος,noun,word/reason,m,2,λόγου,,,
+doron,δῶρον,noun,gift,n,2,δώρου,,,
+luo,λύω,verb,free/loosen,,,,1,λύω;λύσω;ἔλυσα;λέλυκα;ἐλύθην,
+phero,φέρω,verb,carry/bear,,,,irr,"φέρω;οἴσω;ἤνεγκα;ἐνήνοχα;ἐνήνεγμαι;ἠνέχθην",pres-1sg=φέρω;fut-1sg=οἴσω;aor-1sg=ἤνεγκα
+kalos,καλός,adjective,good/beautiful,,1-2,,,,καλός;καλή;καλόν
+autos,αὐτός,pronoun,he/himself,,,,,,nom-sg-m=αὐτός;nom-sg-f=αὐτή;nom-sg-n=αὐτό;acc-sg-m=αὐτόν
+eimi,εἰμί,verb,be,,,,irr,εἰμί;ἔσομαι,impf-3sg=ἦν;pres-3sg=ἐστίν
+agathos,ἀγαθός,adjective,good,,1-2,,,,ἀγαθός;ἀγαθή;ἀγαθόν
+kakos,κακός,adjective,bad/evil,,1-2,,,,κακός;κακή;κακόν
+sophos,σοφός,adjective,wise,,1-2,,,,σοφός;σοφή;σοφόν
+ekeinos,ἐκεῖνος,pronoun,that,,,,,,nom-sg-m=ἐκεῖνος;nom-sg-f=ἐκείνη;nom-sg-n=ἐκεῖνο
+houtos,οὗτος,pronoun,this,,,,,,nom-sg-m=οὗτος;nom-sg-f=αὕτη;nom-sg-n=τοῦτο;acc-pl-n=ταῦτα
+hode,ὅδε,pronoun,this here,,,,,,nom-sg-m=ὅδε;nom-sg-f=ἥδε;nom-sg-n=τόδε
+en,ἐν,preposition,in/on (dat.),,,,,,
+arche,ἀρχή,noun,beginning,f,1,ἀρχῆς,,,
+ho,ὁ,article,the,m/f/n,,τοῦ,,,nom-sg-m=ὁ;acc-sg-m=τὸν;nom-pl-m=οἱ;acc-pl-m=τοὺς;acc-sg-f=τὴν;gen-sg-m=τοῦ;acc-pl-n=τὰ
+kai,καί,conjunction,and/also,,,,,,
+pros,πρός,preposition,with/toward (acc.),,,,,,
+theos,θεός,noun,god,m,2,θεοῦ,,,acc-sg-m=θεόν;nom-sg-m=θεὸς
+de,δέ,conjunction,but/and,,,,,,
+anexetastos,ἀνεξέταστος,adjective,unexamined,,2nd,,,,ἀνεξέταστος;ἀνεξέταστος;ἀνεξέταστον
+bios,βίος,noun,life,m,2,βίου,,,
+ou,οὐ,adverb,not,,,,,,
+biotos,βιωτός,adjective,worth living,,1st/2nd,,,,βιωτός;βιωτή;βιωτόν
+anthropos,ἄνθρωπος,noun,human being,m,2,ἀνθρώπου,,,dat-sg-m=ἀνθρώπῳ
+men,μὲν,particle,on the one hand,,,,,,
+stratiotes,στρατιῶτης,noun,soldier,m,1,στρατιώτου,,,nom-pl-m=στρατιῶται
+echo,ἔχω,verb,have/hold,,,,omega,ἔχω;ἕξω;ἔσχον;ἔσχηκα,pres-ptcp-nom-pl-m=ἔχοντες
+hoplon,ὅπλον,noun,weapon/tool,n,2,ὅπλου,,,acc-pl-n=ὅπλα
+eis,εἰς,preposition,into (acc.),,,,,,
+polis,πόλις,noun,city,f,3,πόλεως,,,acc-sg-f=πόλιν
+trecho,τρέχω,verb,run,,,,irr,τρέχω;δραμοῦμαι;ἔδραμον,aor-3pl-ind=ἔδραμον
+hina,ἵνα,conjunction,in order that,,,,,,
+polites,πολίτης,noun,citizen,m,1,πολίτου,,,acc-pl-m=πολίτας;nom-pl-m=πολῖται
+sozo,σῴζω,verb,save,,,,omega,σῴζω;σώσω;ἔσωσα;σέσωκα,pres-3pl-opt=σῴζοιεν
+basileus,βασιλεύς,noun,king,m,3,βασιλέως,,,gen-sg-m=βασιλέως
+apothnesko,ἀποθνῄσκω,verb,die,,,,omega,ἀποθνῄσκω;ἀποθανοῦμαι;ἀπέθανον,aor-ptcp-gen-sg-m=ἀποθανόντος
+phobeo,φοβέω,verb,fear,,,,contract,φοβέω;φοβήσω;ἐφόβησα,impf-3pl-mid=ἐφοβοῦντο
+me,μή,adverb,lest/not,,,,,,
+polemios,πολέμιος,adjective,hostile/enemy,,1st/2nd,,,,πολέμιος;πολεμία;πολέμιον
+epitithemi,ἐπιτίθημι,verb,attack,,,,mi-verb,ἐπιτίθημι;ἐπιθήσω;ἐπέθηκα,aor-ptcp-nom-pl-m=ἐπιθέμενοι
+diaphtheiro,διαφθείρω,verb,destroy,,,,omega,διαφθείρω;διαφθερῶ;διέφθειρα,aor-3pl-opt=διαφθείρειαν
+ei,εἰ,conjunction,if,,,,,,
+poietes,ποιητής,noun,poet,m,1,ποιητοῦ,,,nom-sg-m=ποιητὴς
+grapho,γράφω,verb,write,,,,omega,γράφω;γράψω;ἔγραψα;γέγραφα,aor-3sg-ind=ἔγραψεν
+pas,πᾶς,adjective,all/every,,1st/3rd,,,,πᾶς;πᾶσα;πᾶν
+an,ἂν,particle,conditional particle,,,,,,
+epaineo,ἐπαινέω,verb,praise,,,,contract,ἐπαινέω;ἐπαινέσω;ἐπῄνεσα,aor-3pl-ind=ἐπήνεσαν
+gignosko,γιγνώσκω,verb,know,,,,omega,γιγνώσκω;γνώσομαι;ἔγνων,aor-2sg-imp=Γνῶθι
+seautou,σεαυτοῦ,pronoun,yourself,,,,,,gen-sg-m=σεαυτοῦ;gen-sg-f=σεαυτῆς;dat-sg-m=σεαυτῷ;dat-sg-f=σεαυτῇ;acc-sg-m=σεαυτόν;acc-sg-f=σεαυτήν
+aggelos,ἄγγελος,noun,messenger,m,2,ἀγγέλου,,,
+erotao,ἐρωτάω,verb,ask,,,,contract,ἐρωτάω;ἐρωτήσω;ἠρώτησα,aor-3sg-ind=ἠρώτησε
+pais,παῖς,noun,child,m/f,3,παιδός,,,acc-pl-m=παῖδας
+tis,τίς,pronoun,what/who,,,,,,nom-sg-m=τίς;nom-sg-f=τίς;nom-sg-n=τί;gen-sg=τίνος;dat-sg=τίνα;acc-sg-n=τί
+poieo,ποιέω,verb,do/make,,,,contract,ποιέω;ποιήσω;ἐποίησα,fut-3pl-opt=ποιήσειαν
+pater,πατήρ,noun,father,m,3,πατρός,,,nom-sg-m=πατὴρ
+aphikneomai,ἀφικνέομαι,verb,arrive,,,,deponent,ἀφικνέομαι;ἀφίξομαι;ἀφικόμην,aor-3sg-opt=ἀφίκοιτο
+houto,οὕτω,adverb,so/thus,,,,,,
+kalos_adv,καλῶς,adverb,well,,,,,,
+lego,λέγω,verb,speak/say,,,,omega,λέγω;ἐρῶ;εἶπον,aor-3sg-ind=ἔλεξεν
+hoste,ὥστε,conjunction,so that,,,,,,
+akouo,ἀκούω,verb,hear/listen,,,,omega,ἀκούω;ἀκούσομαι;ἤκουσα,pres-ptcp-nom-pl-m=ἀκούοντες
+thaumazo,θαυμάζω,verb,amaze/wonder,,,,omega,θαυμάζω;θαυμάσομαι;ἐθαύμασα,impf-3pl-ind=ἐθαύμαζον
+aner,ἀνήρ,noun,man/husband,m,3,ἀνδρός,,,
+gyne,γυνή,noun,woman/wife,f,3,γυναικός,,,
+soma,σῶμα,noun,body,n,3,σώματος,,,
+onoma,ὄνομα,noun,name,n,3,ὀνόματος,,,
+ergon,ἔργον,noun,work/deed,n,2,ἔργου,,,
+nomos,νόμος,noun,law/custom,m,2,νόμου,,,
+hodos,ὁδός,noun,way/road,f,2,ὁδοῦ,,,
+hemera,ἡμέρα,noun,day,f,1,ἡμέρας,,,
+ge,γῆ,noun,earth/land,f,1,γῆς,,,
+psyche,ψυχή,noun,soul/life,f,1,ψυχῆς,,,
+doxa,δόξα,noun,opinion/glory,f,1,δόξης,,,
+kardia,καρδία,noun,heart,f,1,καρδίας,,,
+ophthalmos,ὀφθалμός,noun,eye,m,2,ὀφθαλμοῦ,,,
+ouranos,οὐρανός,noun,heaven/sky,m,2,οὐρανοῦ,,,
+cheir,χείρ,noun,hand,f,3,χειρός,,,
+pneuma,πνεῦμα,noun,spirit/wind,n,3,πνεύματος,,,
+hydor,ὕδωρ,noun,water,n,3,ὕδατος,,,
+pyr,πῦρ,noun,fire,n,3,πυρός,,,
+chronos,χρόνος,noun,time,m,2,χρόνου,,,
+phos,φῶς,noun,light,n,3,φωτός,,,
+moros,μωρός,adjective,foolish,,1st/2nd,,,,μωρός;μωρά;μωρόν
+philos,φίλος,adjective,dear/beloved,,1st/2nd,,,,φίλος;φίλη;φίλον
+alethes,ἀληθής,adjective,true,,3rd,,,,ἀληθής;ἀληθής;ἀληθές
+dikaios,δίκαιος,adjective,just/righteous,,1st/2nd,,,,δίκαιος;δικαία;δίκαιον
+mikros,μικρός,adjective,small/little,,1st/2nd,,,,μικρός;μικρά;μικρόν
+protos,πρῶτος,adjective,first,,1st/2nd,,,,πρῶτος;πρώτη;πρῶτον
+monos,μόνος,adjective,alone/only,,1st/2nd,,,,μόνος;μόνη;μόνον
+polys,πολύς,adjective,much/many,,1st/2nd,,,,πολύς;πολλά;πολύ
+megas,μέγας,adjective,great/large,,1st/2nd,,,,μέγας;μεγάλη;μέγα
+horao,ὁράω,verb,see,,,,contract,"ὁράω;ὄψομαι;εἶδον;ἑώρακα;ἑώραμαι;ὤφθην",
+erchomai,ἔρχομαι,verb,come/go,,,,deponent,"ἔρχομαι;ἐλεύσομαι;ἦλθον;ἐλήλυθα",
+didomi,δίδωμι,verb,give,,,,mi-verb,"δίδωμι;δώσω;ἔδωκα;δέδωκα;δέδομαι;ἐδόθην",
+tithemi,τίθημι,verb,put/place,,,,mi-verb,"τίθημι;θήσω;ἔθηκα;τέθεικα;τέθειμαι;ἐτέθην",
+histemi,ἵστημι,verb,stand/set,,,,mi-verb,"ἵστημι;στήσω;ἔστησα;ἕστηκα;ἕσταμαι;ἐστάθην",
+gignomai,γίγνομαι,verb,become/happen,,,,deponent,"γίγνομαι;γενήσομαι;ἐγενόμην;γέγονα",
+lambano,λαμβάνω,verb,take/receive,,,,omega,"λαμβάνω;λήψομαι;ἔλαβον;εἴληφα;εἴλημμαι;ἐλήφθην",
+heurisko,εὑρίσκω,verb,find,,,,omega,"εὑρίσκω;εὑρήσω;εὗρον;εὕρηκα;εὕρημαι;εὑρέθην",
+peitho,πείθω,verb,persuade,,,,omega,"πείθω;πείσω;ἔπεισα;πέπεικα;πέπεισμαι;ἐπείσθην",
+pempo,πέμπω,verb,send,,,,omega,"πέμπω;πέμψω;ἔπεμψα;πέπομφα;πέπεμμαι;ἐπέμφθην",
+pino,πίνω,verb,drink,,,,omega,"πίνω;πίομαι;ἔπιον;πέπωκα;πέπομαι;ἐπόθην",
+pheugo,φεύγω,verb,flee/escape,,,,omega,"φεύγω;φεύξομαι;ἔφυγον;πέφευγα",
+zeteo,ζητέω,verb,seek/search,,,,contract,"ζητέω;ζητήσω;ἐζήτησα;ἐζήτηκα",
+phileo,φιλέω,verb,love/like,,,,contract,"φιλέω;φιλήσω;ἐφίλησα;πεφίληκα;πεφίλημαι;ἐφιλήθην",
+kaleo,καλέω,verb,call/invite,,,,contract,"καλέω;καλέσω;ἐκάλεσα;κέκληκα;κέκλημαι;ἐκλήθην",
+gar,γάρ,conjunction,for/since,,,,,,
+epi,ἐπί,preposition,upon/on (gen./dat./acc.),,,,,,
+ek,ἐκ,preposition,from/out of (gen.),,,,,,
+hos,ὡς,conjunction,as/how/that,,,,,,
+heis,εἷς,numeral,one,m,,ἑνός,,,
+te,τέ,conjunction,and/both,,,,,,
+kata,κατά,preposition,down/according to (acc.),,,,,,
+meta,μετά,preposition,with (gen.) / after (acc.),,,,,,
+dia,διά,preposition,through (gen.) / because of (acc.),,,,,,
+peri,περί,preposition,about (gen.) / around (acc.),,,,,,
+heautou,ἑαυτοῦ,pronoun,himself/herself,,,,,,gen-sg-m=ἑαυτοῦ;gen-sg-f=ἑαυτῆς;gen-sg-n=ἑαυτοῦ
+alla,ἀλλά,conjunction,but/yet,,,,,,
+apo,ἀπό,preposition,from/away from (gen.),,,,,,
+hoios,οἷος,pronoun,such as,,,,,,nom-sg-m=οἷος;nom-sg-f=οἵα;nom-sg-n=οἷον
+aei,ἀεί,adverb,always/ever,,,,,,
+nun,νῦν,adverb,now,,,,,,
+oute,οὔτε,conjunction,neither/nor,,,,,,
+eti,ἔτι,adverb,still/yet,,,,,,
+oude,οὐδέ,conjunction,nor/not even,,,,,,
+pote,ποτέ,adverb,once/ever,,,,,,
+tote,τότε,adverb,then/at that time,,,,,,
+artos,ἄρτος,noun,bread/loaf,m,2,ἄρτου,,,
+adelphos,ἀδελφός,noun,brother,m,2,ἀδελφοῦ,,,
+haima,αἷμα,noun,blood,n,3,αἵματος,,,
+thalassa,θάλασσα,noun,sea,f,1,θαλάσσης,,,
+thanatos,θάνατος,noun,death,m,2,θανάτου,,,
+oikia,οἰκία,noun,house/home,f,1,οἰκίας,,,
+oikos,οἶκος,noun,house/household,m,2,οἴκου,,,
+topos,τόπος,noun,place,m,2,τόπου,,,
+fobos,φόβος,noun,fear,m,2,φόβου,,,
+fone,φωνή,noun,voice/sound,f,1,φωνῆς,,,
+xaris,χάρις,noun,grace/favor,f,3,χάριτος,,,
+pantokrator,παντοκράτωρ,noun,ruler of all,m,3,παντοκράτορος,,,
+angelos_n,ἄγγελος,noun,angel/messenger,m,2,ἀγγέλου,,,
+doulos,δοῦλος,noun,slave/servant,m,2,δούλου,,,
+eirene,εἰρήνη,noun,peace,f,1,εἰρήνης,,,
+exousia,ἐξουσία,noun,authority/power,f,1,ἐξουσίας,,,
+entole,ἐντολή,noun,commandment,f,1,ἐντολῆς,,,
+euangelion,εὐαγγέλιον,noun,good news/gospel,n,2,εὐαγγελίου,,,
+zoe,ζωή,noun,life,f,1,ζωῆς,,,
+kosmos,κόσμος,noun,world/order,m,2,κόσμου,,,
+mathetes,μαθητής,noun,disciple/student,m,1,μαθητοῦ,,,
+nomikos,νομικός,adjective,pertaining to law,,1st/2nd,,,,νομικός;νομική;νομικόν
+pistis,πίστις,noun,faith/trust,f,3,πίστεως,,,
+pneuma_spirit,πνεῦμα,noun,holy spirit,n,3,πνεύματος,,,
+profetes,προφήτης,noun,prophet,m,1,προφήτου,,,
+sabbaton,σάββατον,noun,sabbath,n,2,σαββάτου,,,
+synagoge,συναγωγή,noun,synagogue/assembly,f,1,συναγωγῆς,,,
+teknon,τέκνον,noun,child,n,2,τέκνον,,,
+fylake,φυλακή,noun,guard/prison,f,1,φυλακῆς,,,
+xristos,χριστός,noun,anointed one/christ,m,2,χριστοῦ,,,
+hagios,ἅγιος,adjective,holy/sacred,,1st/2nd,,,,ἅγιος;ἁγία;ἅγιον
+pistos,πιστός,adjective,faithful/trustworthy,,1st/2nd,,,,πιστός;πιστή;πιστόν
+poneros,πονηρός,adjective,wicked/evil,,1st/2nd,,,,πονηρός;πονηρά;πονηρόν
+akouo_v,ἀκούω,verb,listen/hear,,,,omega,"ἀκούω;ἀκούσω;ἤκουσα",
+hamartano,ἁμαρτάνω,verb,sin/err,,,,omega,"ἁμαρτάνω;ἁμαρτήσομαι;ἥμαρτον",
+apostello,ἀποστέλλω,verb,send out,,,,omega,"ἀποστέλλω;ἀποστελῶ;ἀπέστειλα",
+baptizo,βαπτίζω,verb,baptize/dip,,,,omega,"βαπτίζω;βαπτίσω;ἐβάπτισα",
+grafo,γράφω,verb,write down,,,,omega,"γράφω;γράψω;ἔγραψα",
+doxazo,δοξάζω,verb,glorify/praise,,,,omega,"δοξάζω;δοξάσω;ἐδόξασα",
+egeiro,ἐγείρω,verb,raise up,,,,omega,"ἐγείρω;ἐγερώ;ἤγειρα",
+eulogeo,εὐλογέω,verb,bless,,,,contract,"εὐλογέω;εὐλογήσω;εὐλόγησα",
+therapeuo,θεραπεύω,verb,heal/serve,,,,omega,"θεραπεύω;θεραπεύσω;ἐθεράπευσα",
+kerysso,κηρύσσω,verb,proclaim/preach,,,,omega,"κηρύσσω;κηρύξω;ἐκήρυξα",
+krino,κρίνω,verb,judge/decide,,,,omega,"κρίνω;κρινῶ;ἔκρινα",
+proseuchomai,προσεύχομαι,verb,pray,,,,deponent,"προσεύχομαι;προσεύξομαι;προσηυξάμην",
+sozo_v,σῴζω,verb,rescue/save,,,,omega,"σῴζω;σώσω;ἔσωσα",
+faino,φαίνω,verb,shine/appear,,,,omega,"φαίνω;φανῶ;ἔφηνα",
+xairo,χαίρω,verb,rejoice,,,,omega,"χαίρω;χαιρήσω;ἐχάρην",
+Iesous,Ἰησοῦς,noun,Jesus,m,3,Ἰησοῦ,,,acc-sg-m=Ἰησοῦν
+didaskalos,διδάσκαλος,noun,teacher,m,2,διδασκάλου,,,
+huios,υἱός,noun,son,m,2,υἱοῦ,,,
+mache,μάχη,noun,battle,f,1,μάχης,,,
+kyrios,κύριος,noun,lord/master,m,2,κυρίου,,,
+therapon,θεράπων,noun,servant/attendant,m,3,θεράποντος,,,
+agape,ἀγάπη,noun,love,f,1,ἀγάπης,,,
+blepo,βλέπω,verb,see/look at,,,,omega,"βλέπω;βλέψω;ἔβλεψα",
+esthio,ἐσθίω,verb,eat,,,,irr,"ἐσθίω;ἔδομαι;ἔφαγον;ἐδήδοκα",pres-1sg=ἐσθίω;fut-1sg=ἔδομαι;aor-1sg=ἔφαγον
+angelos,ἄγγελος,noun,messenger/angel,m,2nd,ἀγγέλου,,,
+chairo,χαίρω,verb,to rejoice/be glad,,,,thematic,χαρήσομαι;ἐχάρην,

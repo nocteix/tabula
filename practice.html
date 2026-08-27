@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabula &mdash; Latin &amp; Greek Practice</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <a class="skip-link" href="#app-root">Skip to practice</a>
+
+  <header class="site-header">
+    <h1><a href="index.html" class="site-header-link">Tabula</a></h1>
+    <p>A wax tablet for Latin &amp; Greek practice</p>
+  </header>
+
+  <main id="app-root" class="tablet" tabindex="-1" aria-label="Practice tablet">
+    <div class="tablet-top">
+      <div class="lang-toggle" id="lang-toggle" role="group" aria-label="Choose language">
+        <button type="button" data-lang="latin" aria-pressed="true">Latin</button>
+        <button type="button" data-lang="greek" aria-pressed="false">Greek</button>
+      </div>
+      <div class="mode-tabs" id="mode-tabs" role="group" aria-label="Choose practice mode">
+        <button type="button" data-mode="vocab" aria-pressed="true" aria-controls="mode-panel">Vocab</button>
+        <button type="button" data-mode="paradigm" aria-pressed="false" aria-controls="mode-panel">Paradigms</button>
+        <button type="button" data-mode="parsing" aria-pressed="false" aria-controls="mode-panel">Parsing</button>
+        <button type="button" data-mode="accent" aria-pressed="false" aria-controls="mode-panel">Accent</button>
+      </div>
+    </div>
+
+    <div class="progress-toggle-row">
+      <button type="button" id="progress-toggle" class="progress-toggle" aria-pressed="false" aria-controls="mode-panel">Progress</button>
+    </div>
+
+    <p id="mode-status" class="visually-hidden" role="status" aria-live="polite"></p>
+    <div class="mode-panel" id="mode-panel" role="region" aria-label="Practice area" tabindex="-1"></div>
+  </main>
+
+  <footer class="credit">
+    <button type="button" id="reset-progress" class="reset-link">Reset saved progress</button>
+    <p id="reset-status" class="visually-hidden" role="status" aria-live="polite"></p>
+    <nav class="footer-resources" aria-labelledby="footer-resources-heading">
+      <h2 id="footer-resources-heading" class="footer-resources-heading">Resources</h2>
+      <ul class="footer-resources-list">
+        <li><a href="https://logeion.uchicago.edu/" target="_blank" rel="noopener noreferrer">Logeion</a> &mdash; Latin &amp; Greek dictionary</li>
+        <li><a href="https://www.perseus.tufts.edu/hopper/" target="_blank" rel="noopener noreferrer">Perseus Digital Library</a> &mdash; texts &amp; word study</li>
+        <li><a href="https://dcc.dickinson.edu/home-page-ref-works" target="_blank" rel="noopener noreferrer">Dickinson College Commentaries: Reference Works</a> &mdash; grammars, paradigms &amp; vocabularies</li>
+      </ul>
+    </nav>
+    <nav class="footer-resources footer-contact" aria-labelledby="footer-contact-heading">
+      <h2 id="footer-contact-heading" class="footer-resources-heading">Contact</h2>
+      <ul class="footer-resources-list">
+        <li><a href="https://github.com/nocteix" target="_blank" rel="noopener noreferrer">github.com/nocteix</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

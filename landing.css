@@ -1,0 +1,345 @@
+/* Landing page — reuses the wax-tablet tokens defined in style.css */
+
+.landing-body {
+  padding: 0;
+  align-items: stretch;
+  background:
+    radial-gradient(ellipse 900px 500px at 50% -10%, rgba(255, 255, 255, 0.05), transparent 60%),
+    repeating-linear-gradient(100deg, rgba(0, 0, 0, 0.12) 0px, transparent 1.5px, transparent 3px),
+    repeating-linear-gradient(96deg, rgba(255, 255, 255, 0.025) 0px, transparent 2px, transparent 5px),
+    var(--wood);
+}
+
+.landing {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1rem 2rem;
+}
+
+/* --- Hero: the tablet held open --- */
+
+.hero {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  margin-bottom: 3.5rem;
+}
+
+.hero-tablet {
+  position: relative;
+  background:
+    radial-gradient(ellipse 420px 260px at 50% 18%, rgba(255, 255, 255, 0.35), transparent 65%),
+    repeating-linear-gradient(178deg, rgba(0, 0, 0, 0.02) 0px, transparent 1px, transparent 3px),
+    var(--wax);
+  border-radius: 6px;
+  box-shadow:
+    0 0 0 10px var(--wood-light),
+    0 0 0 12px var(--wood),
+    0 22px 50px rgba(0, 0, 0, 0.5);
+  padding: 3.25rem 2.5rem 2.75rem;
+  text-align: center;
+}
+
+.tablet-hole {
+  position: absolute;
+  top: 50%;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  background: var(--wood);
+  box-shadow:
+    inset 0 1px 2px rgba(0, 0, 0, 0.6),
+    0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.tablet-hole-left { left: -22px; }
+.tablet-hole-right { right: -22px; }
+
+.hero-seam {
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 50%;
+  width: 2px;
+  background: linear-gradient(var(--line), transparent 10%, transparent 90%, var(--line));
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.hero-eyebrow {
+  font-family: sans-serif;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--wood-light);
+  opacity: 0.85;
+  margin-bottom: 1.1rem;
+}
+
+.hero-title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  margin-bottom: 0.9rem;
+}
+
+.hero-title-la {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  font-size: clamp(2.4rem, 8vw, 3.4rem);
+  letter-spacing: 0.1em;
+  color: var(--wood);
+}
+
+.hero-title-flourish {
+  display: block;
+  color: var(--line);
+  font-size: 1rem;
+  line-height: 1;
+  opacity: 0.8;
+}
+
+.hero-title-gr {
+  font-family: 'Cinzel', serif;
+  font-weight: 500;
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  letter-spacing: 0.08em;
+  color: var(--bronze);
+}
+
+.hero-scope {
+  font-family: sans-serif;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--bronze);
+  opacity: 0.85;
+  margin-top: 0.9rem;
+  margin-bottom: 1.6rem;
+}
+
+.hero-lede {
+  font-family: 'Gentium Plus', serif;
+  font-size: 1.02rem;
+  line-height: 1.8;
+  color: var(--wood-light);
+  max-width: 46ch;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.hero-lede + .hero-lede {
+  margin-top: 0.9rem;
+}
+
+.hero-lede:last-of-type {
+  margin-bottom: 2rem;
+}
+
+.hero-scroll-hint {
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--wood-light);
+  opacity: 0.75;
+  margin-top: 1.75rem;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  cursor: pointer;
+}
+
+.hero-scroll-hint:hover,
+.hero-scroll-hint:focus-visible {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
+/* --- Modes grid --- */
+
+.modes {
+  width: 100%;
+  max-width: 760px;
+}
+
+.modes-heading {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--wax);
+  opacity: 0.75;
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.mode-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.mode-card-wide {
+  grid-column: 1 / -1;
+}
+
+.mode-card {
+  display: block;
+  position: relative;
+  height: 100%;
+  box-sizing: border-box;
+  background: var(--stone);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 1.4rem 1.5rem 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.15s ease, transform 0.15s ease, border-color 0.15s ease;
+}
+
+.mode-card:hover,
+.mode-card:focus-visible {
+  background: var(--wax-dark);
+  border-color: var(--bronze);
+  transform: translateY(-2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mode-card { transition: none; }
+  .mode-card:hover, .mode-card:focus-visible { transform: none; }
+}
+
+.mode-card-label {
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--wood-light);
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.2rem 0.6rem;
+  margin-bottom: 0.7rem;
+}
+
+.mode-card h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.15rem;
+  color: var(--wood);
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px dashed var(--line);
+}
+
+.mode-card p {
+  font-family: 'Gentium Plus', serif;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--wood-light);
+}
+
+/* The recommended entry point: the Vocab card by default, or -- once the
+   landing page's inline personalization script runs -- whichever mode the
+   person last used. Both the persistent card highlight and its "start
+   here"/"continue here" badge are applied via JS (see index.html), so they
+   need their own rules; nothing above styles them. */
+
+.mode-card-default {
+  border-color: var(--bronze);
+  background: var(--wax-dark);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+}
+
+.mode-card-default:hover,
+.mode-card-default:focus-visible {
+  background: var(--stone);
+}
+
+.mode-card-start {
+  display: inline-block;
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--wax);
+  background: var(--bronze);
+  border-radius: 999px;
+  padding: 0.15rem 0.55rem;
+  margin-left: 0.6rem;
+  vertical-align: middle;
+}
+
+/* Progress card: distinct dark "ledger" styling — placed after the base
+   .mode-card rules above so it wins the cascade despite equal specificity. */
+
+.mode-card-wide .mode-card {
+  background: linear-gradient(135deg, var(--wood-light) 0%, var(--bronze) 160%);
+  border: 1px solid var(--bronze);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.25rem 1.75rem;
+}
+
+.mode-card-wide .mode-card:hover,
+.mode-card-wide .mode-card:focus-visible {
+  background: linear-gradient(135deg, var(--bronze) 0%, var(--wood-light) 160%);
+  border-color: var(--wax);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.45);
+  transform: translateY(-2px);
+}
+
+.mode-card-wide .mode-card-label {
+  flex-shrink: 0;
+  color: var(--wax);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--bronze);
+  margin-bottom: 0;
+}
+
+.mode-card-wide h3 {
+  color: var(--wax);
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0.25rem;
+}
+
+.mode-card-wide p {
+  color: var(--wax);
+  opacity: 0.8;
+  margin: 0;
+}
+
+@media (max-width: 560px) {
+  .mode-card-wide .mode-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+.landing-footer {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 560px) {
+  .hero-tablet { padding: 2.25rem 1.5rem 2rem; }
+  .hero-lede { text-align: left; }
+  .hero-seam { display: none; }
+  .mode-grid { grid-template-columns: 1fr; }
+  .tablet-hole-left { left: -14px; }
+  .tablet-hole-right { right: -14px; }
+}

@@ -1,0 +1,823 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Gentium+Plus:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  --wax: #e9dcb4;
+  --wax-dark: #dccb98;
+  --wood: #2e2116;
+  --wood-light: #4a3826;
+  --bronze: #55603d;
+  --rubric: #a1402e;
+  --stone: #cdb98a;
+  --line: #b8a06a;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:focus-visible {
+  outline: 2px solid var(--rubric);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+body {
+  font-family: 'Gentium Plus', 'Cambria', Georgia, serif;
+  min-height: 100vh;
+  background: var(--wood);
+  color: var(--wood);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem 1rem 3rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0.5rem;
+  z-index: 2000;
+  background: var(--wax);
+  color: var(--wood);
+  font-family: sans-serif;
+  font-size: 0.85rem;
+  padding: 0.6rem 1rem;
+  border-radius: 0 0 4px 4px;
+}
+.skip-link:focus { top: 0; }
+
+.site-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--wax);
+}
+
+.site-header h1 {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  font-size: 1.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.site-header-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-header-link:hover { text-decoration: underline; }
+
+.site-header p {
+  font-family: 'Gentium Plus', serif;
+  font-style: italic;
+  font-size: 0.95rem;
+  opacity: 0.75;
+  margin-top: 0.3rem;
+}
+
+/* --- The tablet (diptych) --- */
+
+.tablet {
+  position: relative;
+  width: 100%;
+  max-width: 760px;
+  background: var(--wax);
+  border-radius: 6px;
+  box-shadow:
+    0 0 0 10px var(--wood-light),
+    0 0 0 12px var(--wood),
+    0 18px 40px rgba(0, 0, 0, 0.45);
+  padding: 1.75rem 1.75rem 1.5rem;
+}
+
+.tablet::before {
+  /* hinge seam of the diptych */
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: linear-gradient(var(--line), transparent 8%, transparent 92%, var(--line));
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.tablet-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.lang-toggle {
+  display: flex;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.lang-toggle button {
+  font-family: 'Cinzel', serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.5rem 0.9rem;
+  min-height: 40px;
+  background: var(--wax-dark);
+  border: none;
+  color: var(--wood);
+  cursor: pointer;
+}
+
+.lang-toggle button + button { border-left: 1px solid var(--line); }
+
+.lang-toggle button[aria-pressed="true"] {
+  background: var(--wood);
+  color: var(--wax);
+}
+
+.mode-tabs {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.mode-tabs button {
+  font-family: 'Gentium Plus', serif;
+  font-size: 0.85rem;
+  padding: 0.5rem 0.8rem;
+  min-height: 40px;
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  color: var(--wood);
+  cursor: pointer;
+}
+
+.mode-tabs button[aria-pressed="true"] {
+  background: var(--bronze);
+  border-color: var(--bronze);
+  color: var(--wax);
+  font-weight: 700;
+}
+
+.mode-panel {
+  min-height: 320px;
+}
+
+.progress-toggle-row {
+  display: flex;
+  justify-content: flex-end;
+  margin: -0.5rem 0 1.1rem;
+}
+
+.progress-toggle {
+  font-family: sans-serif;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.4rem 0.9rem;
+  min-height: 32px;
+  background: transparent;
+  border: 1px solid var(--bronze);
+  border-radius: 999px;
+  color: var(--bronze);
+  cursor: pointer;
+}
+
+.progress-toggle:hover {
+  background: var(--bronze);
+  color: var(--wax);
+}
+
+.progress-toggle[aria-pressed="true"] {
+  background: var(--bronze);
+  border-color: var(--bronze);
+  color: var(--wax);
+  font-weight: 700;
+}
+
+/* --- Incised text: pressed into the wax --- */
+
+.incised {
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.35),
+    0 -1px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* --- Vocab mode --- */
+
+.vocab-card {
+  background: var(--stone);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.vocab-card .headword, .accent-card .headword {
+  font-family: 'Cinzel', serif;
+  font-size: 1.9rem;
+}
+
+.vocab-card .pos-tag, .accent-card .pos-tag {
+  font-family: sans-serif;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.6;
+}
+
+.vocab-card .meaning, .accent-card .meaning {
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--wood-light);
+}
+
+.vocab-card .word-principal {
+  font-family: 'Gentium Plus', serif;
+  font-size: 0.95rem;
+  color: var(--wood-light);
+  opacity: 0.8;
+}
+
+.vocab-controls {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 1.1rem;
+  flex-wrap: wrap;
+}
+
+.vocab-progress {
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 0.78rem;
+  opacity: 0.65;
+  margin-top: 0.75rem;
+}
+
+/* --- Shared buttons --- */
+
+button.action {
+  font-family: 'Gentium Plus', serif;
+  font-size: 0.9rem;
+  padding: 0.55rem 1.1rem;
+  min-height: 42px;
+  border-radius: 4px;
+  border: 1px solid var(--line);
+  background: var(--wax-dark);
+  color: var(--wood);
+  cursor: pointer;
+}
+
+button.action:hover { background: var(--stone); }
+
+button.action.primary {
+  background: var(--wood);
+  color: var(--wax);
+  border-color: var(--wood);
+}
+
+button.action.good {
+  background: var(--bronze);
+  color: var(--wax);
+  border-color: var(--bronze);
+}
+
+button.action.bad {
+  background: var(--rubric);
+  color: var(--wax);
+  border-color: var(--rubric);
+}
+
+/* --- Paradigm mode --- */
+
+.paradigm-picker {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.paradigm-picker select, .paradigm-tense-picker select {
+  font-family: 'Gentium Plus', serif;
+  font-size: 0.95rem;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--wax);
+  color: var(--wood);
+  min-height: 40px;
+}
+
+.paradigm-search {
+  font-family: 'Gentium Plus', serif;
+  font-size: 0.95rem;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--wax);
+  color: var(--wood);
+  min-height: 40px;
+  min-width: 10rem;
+  flex: 1 1 10rem;
+}
+
+.paradigm-tense-picker {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.75rem;
+}
+
+table.paradigm-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+table.paradigm-table caption {
+  text-align: left;
+  font-family: 'Cinzel', serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  opacity: 0.7;
+}
+
+table.paradigm-table th, table.paradigm-table td {
+  border: 1px solid var(--line);
+  padding: 0.45rem 0.5rem;
+  text-align: left;
+}
+
+table.paradigm-table th {
+  font-family: sans-serif;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: var(--wax-dark);
+}
+
+.paradigm-input {
+  width: 100%;
+  font-family: 'Gentium Plus', serif;
+  font-size: 0.9rem;
+  border: none;
+  background: transparent;
+  color: var(--wood);
+  padding: 0.15rem;
+}
+
+.paradigm-input.correct {
+  color: var(--bronze);
+  font-weight: 700;
+  border-bottom: 2px solid var(--bronze);
+}
+.paradigm-input.incorrect {
+  color: var(--rubric);
+  border-bottom: 2px dashed var(--rubric);
+}
+
+.paradigm-note {
+  font-family: sans-serif;
+  font-size: 0.78rem;
+  opacity: 0.7;
+  margin-top: 1rem;
+}
+
+/* --- Parsing mode --- */
+
+.parsing-sentence {
+  font-family: 'Gentium Plus', serif;
+  font-size: 1.35rem;
+  line-height: 1.9;
+  margin-bottom: 1rem;
+}
+
+.parsing-word {
+  background: none;
+  border: none;
+  border-bottom: 2px dotted var(--line);
+  font: inherit;
+  color: var(--wood);
+  cursor: pointer;
+  padding: 0 0.1rem;
+}
+
+.parsing-word:hover { background: var(--wax-dark); }
+.parsing-word.known { border-bottom-style: solid; border-bottom-color: var(--bronze); }
+
+.parsing-word.done {
+  border-bottom-style: solid;
+  border-bottom-color: var(--bronze);
+  color: var(--bronze);
+}
+.parsing-word.wrong-once {
+  border-bottom-style: solid;
+  border-bottom-color: var(--rubric);
+  text-decoration: underline wavy var(--rubric);
+  text-underline-offset: 3px;
+}
+
+.parsing-quiz {
+  background: var(--stone);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.parsing-quiz .tag-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.parsing-quiz label {
+  font-family: sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  width: 5rem;
+  opacity: 0.7;
+}
+
+.parsing-quiz select {
+  font-family: 'Gentium Plus', serif;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  min-height: 36px;
+}
+
+.parsing-quiz select.correct {
+  border-color: var(--bronze);
+  color: var(--bronze);
+  font-weight: 700;
+}
+
+.parsing-quiz select.incorrect {
+  border-color: var(--rubric);
+  color: var(--rubric);
+}
+
+.parsing-translation-row {
+  margin: 0.75rem 0 1rem;
+}
+
+.parsing-translation {
+  margin-top: 0.6rem;
+  font-family: 'Gentium Plus', serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--wood-light);
+}
+
+.parsing-feedback {
+  margin-top: 0.75rem;
+  font-family: sans-serif;
+  font-size: 1rem;
+}
+
+.parsing-feedback.correct { color: var(--bronze); font-weight: 700; }
+.parsing-feedback.incorrect { color: var(--rubric); font-weight: 700; }
+
+.parsing-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.25rem;
+}
+
+/* --- Accent mode --- */
+
+.accent-card {
+  background: var(--stone);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.accent-card .accent-word {
+  letter-spacing: 0.02em;
+}
+
+.accent-target {
+  background: none;
+  color: var(--wood);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-color: var(--line);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.accent-question {
+  font-family: sans-serif;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  opacity: 0.7;
+  margin: 0.9rem 0 0.5rem;
+  text-align: center;
+}
+
+.accent-group-label {
+  font-family: sans-serif;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  opacity: 0.55;
+  text-align: center;
+  margin: 0.6rem 0 0.35rem;
+}
+
+.accent-btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+/* Selected-but-not-yet-checked state — deliberately not the bronze used for
+   "correct" feedback elsewhere, so picking an answer doesn't itself look
+   like getting it right. */
+button.accent-btn[aria-pressed="true"] {
+  background: var(--wood);
+  color: var(--wax);
+  border-color: var(--wood);
+}
+
+.accent-controls {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+#accent-feedback {
+  margin-top: 0.75rem;
+  font-family: sans-serif;
+  font-size: 1rem;
+  text-align: center;
+}
+
+footer.credit {
+  margin-top: 1.25rem;
+  color: rgba(233, 220, 180, 0.7); /* var(--wax) at 0.7 alpha, via color rather than opacity, so children can set their own alpha independently */
+  font-family: sans-serif;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+footer.credit .reset-link {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+  margin-top: 0.35rem;
+}
+
+footer.credit .reset-link:hover { opacity: 0.85; }
+
+.footer-resources {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(233, 220, 180, 0.2);
+}
+
+.footer-resources-heading {
+  font-family: sans-serif;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(233, 220, 180, 0.55);
+  margin-bottom: 0.6rem;
+}
+
+.footer-resources-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.35rem 1rem;
+}
+
+.footer-resources-list a {
+  color: rgba(233, 220, 180, 0.9);
+  text-decoration: underline;
+  text-decoration-color: rgba(233, 220, 180, 0.35);
+  text-underline-offset: 2px;
+}
+
+.footer-resources-list a:hover,
+.footer-resources-list a:focus-visible {
+  color: var(--wax);
+  text-decoration-color: currentColor;
+}
+
+/* --- Progress mode --- */
+
+.progress-summary {
+  font-family: sans-serif;
+  font-size: 0.85rem;
+  opacity: 0.75;
+  margin-bottom: 1.25rem;
+}
+
+.progress-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.progress-card {
+  background: var(--stone);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 1rem 1.1rem;
+}
+
+.progress-card h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px dashed var(--line);
+}
+
+.progress-card .progress-figure {
+  font-family: 'Cinzel', serif;
+  font-size: 1.6rem;
+  color: var(--wood);
+}
+
+.progress-card .progress-caption {
+  font-family: sans-serif;
+  font-size: 0.75rem;
+  opacity: 0.7;
+  margin-bottom: 0.6rem;
+}
+
+.progress-bar {
+  height: 8px;
+  border-radius: 999px;
+  background: var(--wax-dark);
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: var(--bronze);
+}
+
+.progress-table-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem 1.25rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.progress-touched-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  opacity: 0.85;
+  cursor: pointer;
+}
+
+/* --- Pagination Styles --- */
+
+.progress-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0.85rem 0;
+  font-family: sans-serif;
+  font-size: 0.85rem;
+}
+
+.progress-pagination button {
+  font-family: 'Cinzel', serif;
+  font-size: 0.8rem;
+  padding: 0.35rem 0.85rem;
+  background: var(--stone);
+  color: var(--wood);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.15s ease, opacity 0.15s ease;
+}
+
+.progress-pagination button:hover:not(:disabled) {
+  background: var(--wax-dark);
+}
+
+.progress-pagination button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* --- Table Wrapper & Table --- */
+
+.progress-table-wrap {
+  margin-top: 0.5rem;
+  overflow-x: auto;
+}
+
+table.progress-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+table.progress-table caption {
+  text-align: left;
+  font-family: 'Cinzel', serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  opacity: 0.7;
+}
+
+table.progress-table th, table.progress-table td {
+  border: 1px solid var(--line);
+  padding: 0.4rem 0.5rem;
+  text-align: left;
+}
+
+table.progress-table th {
+  font-family: sans-serif;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: var(--wax-dark);
+}
+
+table.progress-table td.num { 
+  text-align: right; 
+  font-variant-numeric: tabular-nums; 
+}
+
+@media (max-width: 560px) {
+  .tablet { padding: 1.25rem 1rem; }
+  .tablet::before { display: none; }
+  .site-header h1 { font-size: 1.35rem; }
+  
+  .progress-pagination {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+}
